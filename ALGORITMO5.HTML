@@ -1,19 +1,69 @@
 <html>
-	<head>
-		<title> algoritmo5 </title>
-	</head>
-	<body bgcolor="">
-		<!-- salvar: INDEX.HTML -->
-		<hr>
-		   <center> ALGORITMO 5 </center>
-		<hr>
-		5. Classificação por Idade
-		<br>
-Desenvolva um programa que classifique uma pessoa em "Criança" (0-12), "Adolescente" (13-17), "Adulto" (18-64) ou "Idoso" (65+).
+    <head>
+        <title> algoritmo5 </title>
+    </head>
+    <body bgcolor="">
+        <!-- salvar: HOME.HTML -->
+        <hr>
+            <center> 
+                <b> <!-- NEGRITO -->
+                    ALGORITMO 5 
+                </b>
+            </center>
+        <hr>    
+        
+            5. Classificação por Idade
 
-		<br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-	<body>
+        <br>
+            Desenvolva um programa que classifique uma pessoa em "Criança" (0-12), "Adolescente" (13-17), "Adulto" (18-64) ou "Idoso" (65+).
+
+
+        <br>
+        <b> <!-- NEGRITO -->
+            Resposta 
+       
+<html>
+    <head>
+        <title>Classificação Etária</title>
+    </head>
+    <body>
+
+        
+        <p>Digite sua idade e descubra em qual faixa etária você se encaixa:</p>
+
+        <form>
+            <label for="idade">Digite sua idade:</label><br>
+            <input type="number" id="idade"><br><br>
+            <input type="button" value="Classificar" onclick="classificarPessoa()">
+        </form>
+
+        <p id="resultado"></p>
+
+        <script>
+            function classificarPessoa() {
+                var idade = document.getElementById("idade").value;
+                var resultado = document.getElementById("resultado");
+
+                if (idade == "") {
+                    resultado.innerHTML = "Por favor, insira sua idade.";
+                } else if (idade >= 0 && idade <= 12) {
+                    resultado.innerHTML = "Você é uma Criança.";
+                } else if (idade >= 13 && idade <= 17) {
+                    resultado.innerHTML = "Você é um Adolescente.";
+                } else if (idade >= 18 && idade <= 64) {
+                    resultado.innerHTML = "Você é um Adulto.";
+                } else if (idade >= 65) {
+                    resultado.innerHTML = "Você é um Idoso.";
+                } else {
+                    resultado.innerHTML = "Idade inválida.";
+                }
+            }
+        </script>
+
+    </body>
+</html>
+
+ </b>
+        <br>
+    </body>
 </html>

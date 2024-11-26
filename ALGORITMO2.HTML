@@ -1,20 +1,61 @@
 <html>
-	<head>
-		<title> algoritmo2 </title>
-	</head>
-	<body bgcolor="">
-		<!-- salvar: INDEX.HTML -->
-		<hr>
-		   <center> ALGORITMO 2 </center>
-		<hr>
-		2. Classificação de Notas
-		<br>
-Desenvolva um programa que receba uma nota e classifique como "Excelente" (>= 9), "Bom" (>= 7), "Regular" (>= 5) ou "Reprovado" (< 5).
- <br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-	<br>
-		
-	<body>
+    <head>
+        <title> algoritmo2 </title>
+    </head>
+    <body bgcolor="">
+        <!-- salvar: HOME.HTML -->
+        <hr>
+            <center> 
+                <b> <!-- NEGRITO -->
+                    ALGORITMO 2 
+                </b>
+            </center>
+        <hr>    
+        
+            2. Classificação de Notas
+        <br>
+            Desenvolva um programa que receba uma nota e classifique como "Excelente" (>= 9), "Bom" (>= 7), "Regular" (>= 5) ou "Reprovado" (< 5).
+        <br>
+        <b> <!-- NEGRITO -->
+            Resposta 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação de Nota</title>
+</head>
+<body>
+
+    <h2>Classificação de Nota</h2>
+    <label for="nota">Digite a nota (0 a 10):</label><br>
+    <input type="number" id="nota" min="0" max="10" step="0.1" required><br>
+    <button onclick="classificarNota()">Classificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function classificarNota() {
+            var nota = parseFloat(document.getElementById("nota").value);
+            var resultado = document.getElementById("resultado");
+
+            if (isNaN(nota) || nota < 0 || nota > 10) {
+                resultado.textContent = "Por favor, insira uma nota válida entre 0 e 10.";
+            } else {
+                if (nota >= 9) {
+                    resultado.textContent = "Excelente";
+                } else if (nota >= 7) {
+                    resultado.textContent = "Bom";
+                } else if (nota >= 5) {
+                    resultado.textContent = "Regular";
+                } else {
+                    resultado.textContent = "Reprovado";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+    </body>
 </html>

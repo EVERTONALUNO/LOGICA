@@ -1,19 +1,66 @@
 <html>
-	<head>
-		<title> algoritmo4 </title>
-	</head>
-	<body bgcolor="">
-		<!-- salvar: INDEX.HTML -->
-		<hr>
-		   <center> ALGORITMO 4 </center>
-		<hr>
-		4. Cálculo de Salário com Bônus
-		<br>
-Crie um programa que receba o salário de um funcionário e calcule um bônus de 10% se o salário for menor que 2000. Caso contrário, calcule um bônus de 5%.
-<br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-		
-	<body>
+    <head>
+        <title> algoritmo4 </title>
+    </head>
+    <body bgcolor="">
+        <!-- salvar: HOME.HTML -->
+        <hr>
+            <center> 
+                <b> <!-- NEGRITO -->
+                    ALGORITMO 4 
+                </b>
+            </center>
+        <hr>    
+        
+            3. Verificação de Par ou Ímpar
+
+        <br>
+            Escreva um programa que receba um número e informe se ele é par ou ímpar.
+
+        <br>
+        <b> <!-- NEGRITO -->
+            Resposta 
+        
+
+<html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Bônus</title>
+</head>
+<body>
+
+    <h2>Calcular Bônus do Funcionário</h2>
+    <label for="salario">Digite o salário:</label><br>
+    <input type="number" id="salario" step="0.01" required><br>
+    <button onclick="calcularBonus()">Calcular Bônus</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularBonus() {
+            var salario = parseFloat(document.getElementById("salario").value);
+            var resultado = document.getElementById("resultado");
+
+            if (isNaN(salario) || salario <= 0) {
+                resultado.textContent = "Por favor, insira um salário válido.";
+            } else {
+                var bonus;
+                if (salario < 2000) {
+                    bonus = salario * 0.10;  // 10% de bônus
+                } else {
+                    bonus = salario * 0.05;  // 5% de bônus
+                }
+                resultado.textContent = "O bônus do funcionário é: R$ " + bonus.toFixed(2);
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+</b>
+        <br>
+    </body>
 </html>

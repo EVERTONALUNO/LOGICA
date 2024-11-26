@@ -2,18 +2,59 @@
 	<head>
 		<title> algoritmo1 </title>
 	</head>
-	<body bgcolor="light red">
-		<!-- salvar: INDEX.HTML -->
+	<body bgcolor="">
+		<!-- salvar: HOME.HTML -->
 		<hr>
-		   <center> ALGORITMO 1 </center>
+			<center> 
+				<b> <!-- NEGRITO -->
+					ALGORITMO 1 
+				</b>
+			</center>
 		<hr>
 		1. Verificação de Maioridade
 		<br>
-Crie um programa que receba a idade de uma pessoa e informe se ela é maior de idade (18 anos ou mais).
-<br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-	<br>
-	<body>
+		Crie um programa que receba a idade de uma pessoa e informe se ela é maior de idade (18 anos ou mais).
+		<br>
+		<b> <!-- NEGRITO -->
+			Resposta 
+			<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade</title>
+    <script>
+        function verificarIdade() {
+            // Obtém o valor inserido no campo de idade
+            var idade = document.getElementById("idade").value;
+            
+            // Verifica se o valor é um número válido
+            if (isNaN(idade) || idade === "") {
+                alert("Por favor, insira uma idade válida.");
+                return;
+            }
+            
+            // Converte para número inteiro
+            idade = parseInt(idade);
+            
+            // Verifica a idade e exibe a mensagem
+            if (idade >= 18) {
+                document.getElementById("resultado").innerHTML = "Você tem 18 anos ou mais.";
+            } else {
+                document.getElementById("resultado").innerHTML = "Você tem menos de 18 anos.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <p>Digite a sua idade:</p>
+    <input type="text" id="idade" placeholder="Digite sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+    <p id="resultado"></p>
+</body>
+</html>
+		</b>
+		<br>
+	</body>
 </html>

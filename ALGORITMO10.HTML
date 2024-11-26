@@ -3,17 +3,59 @@
 		<title> algoritmo10 </title>
 	</head>
 	<body bgcolor="">
-		<!-- salvar: INDEX.HTML -->
+		<!-- salvar: HOME.HTML -->
 		<hr>
-		   <center> ALGORITMO 10 </center>
-		<hr>
+			<center> 
+				<b> <!-- NEGRITO -->
+					ALGORITMO 10 
+				</b>
+			</center>
+		<hr>	
 		
-	10. Verificação de Categoria de Produto
-	<br>
-Desenvolva um programa que receba o preço de um produto e classifique-o em "Barato" (até 50), "Moderado" (51-100) ou "Caro" (mais de 100).
-<br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-	<body>
+		10. Verificação de Categoria de Produto
+
+		<br>
+
+			Desenvolva um programa que receba o preço de um produto e classifique-o em "Barato" (até 50), "Moderado" (51-100) ou "Caro" (mais de 100).
+
+		<br>
+		<b> <!-- NEGRITO -->
+			Resposta 
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificar Preço do Produto</title>
+</head>
+<body>
+    <h2>Classificar Preço do Produto</h2>
+
+    <label for="preco">Digite o preço do produto:</label>
+    <input type="number" id="preco">
+    <br><br>
+    
+    <button onclick="classificarPreco()">Classificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function classificarPreco() {
+            var preco = parseFloat(document.getElementById("preco").value);
+            var resultado = document.getElementById("resultado");
+
+            if (preco <= 50) {
+                resultado.textContent = "O produto é: Barato.";
+            } else if (preco > 50 && preco <= 100) {
+                resultado.textContent = "O produto é: Moderado.";
+            } else {
+                resultado.textContent = "O produto é: Caro.";
+            }
+        }
+    </script>
+</body>
+</html>
+
+		</b>
+		<br>
+	</body>
 </html>

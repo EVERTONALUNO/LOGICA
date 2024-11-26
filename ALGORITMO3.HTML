@@ -1,19 +1,64 @@
 <html>
-	<head>
-		<title> algoritmo3 </title>
-	</head>
-	<body bgcolor="">
-		<!-- salvar: INDEX.HTML -->
-		<hr>
-		   <center> ALGORITMO 3 </center>
-		<hr>
-		3. Verificação de Par ou Ímpar
-		<br>
-Escreva um programa que receba um número e informe se ele é par ou ímpar.
-<br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-	<br>
-	<body>
+    <head>
+        <title> algoritmo3 </title>
+    </head>
+    <body bgcolor="">
+        <!-- salvar: HOME.HTML -->
+        <hr>
+            <center> 
+                <b> <!-- NEGRITO -->
+                    ALGORITMO 3 
+                </b>
+            </center>
+        <hr>    
+        
+            3. Verificação de Par ou Ímpar
+
+        <br>
+            Escreva um programa que receba um número e informe se ele é par ou ímpar.
+
+        <br>
+        <b> <!-- NEGRITO -->
+            Resposta 
+       
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+
+    <h2>Verifique se o número é Par ou Ímpar</h2>
+    <label for="numero">Digite um número:</label><br>
+    <input type="number" id="numero" required><br>
+    <button onclick="verificarParOuImpar()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarParOuImpar() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var resultado = document.getElementById("resultado");
+
+            if (isNaN(numero)) {
+                resultado.textContent = "Por favor, insira um número válido.";
+            } else {
+                if (numero % 2 === 0) {
+                    resultado.textContent = "O número " + numero + " é Par.";
+                } else {
+                    resultado.textContent = "O número " + numero + " é Ímpar.";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+ </b>
+        <br>
+    </body>
 </html>

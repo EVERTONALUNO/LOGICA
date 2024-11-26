@@ -3,17 +3,59 @@
 		<title> algoritmo6 </title>
 	</head>
 	<body bgcolor="">
-		<!-- salvar: INDEX.HTML -->
+		<!-- salvar: HOME.HTML -->
 		<hr>
-		   <center> ALGORITMO 6 </center>
-		<hr>
-		6. Verificação de Nota para Aprovação
-		<br>
-Crie um programa que receba a nota de um aluno e informe se ele foi aprovado (nota >= 6), está de recuperação (entre 4 e 5.9), ou reprovado (nota < 4).
+			<center> 
+				<b> <!-- NEGRITO -->
+					ALGORITMO 6 
+				</b>
+			</center>
+		<hr>	
+		
+		 	6. Verificação de Nota para Aprovação
 
 		<br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-	<body>
+			Crie um programa que receba a nota de um aluno e informe se ele foi aprovado (nota >= 6), está de recuperação (entre 4 e 5.9), ou reprovado (nota < 4)
+
+		<br>
+		<b> <!-- NEGRITO -->
+			Resposta 
+<html>
+    <head>
+        <title>Classificação de Nota</title>
+    </head>
+    <body>
+
+        <p>Digite a nota do aluno e descubra sua classificação:</p>
+
+        <form>
+            <label for="nota">Digite a nota:</label><br>
+            <input type="number" id="nota" step="0.1" min="0" max="10"><br><br>
+            <input type="button" value="Classificar" onclick="classificarNota()">
+        </form>
+
+        <p id="resultado"></p>
+
+        <script>
+            function classificarNota() {
+                var nota = parseFloat(document.getElementById("nota").value);
+                var resultado = document.getElementById("resultado");
+
+                if (isNaN(nota) || nota < 0 || nota > 10) {
+                    resultado.innerHTML = "Por favor, insira uma nota válida entre 0 e 10.";
+                } else if (nota >= 6) {
+                    resultado.innerHTML = "O aluno foi APROVADO.";
+                } else if (nota >= 4) {
+                    resultado.innerHTML = "O aluno está de RECUPERAÇÃO.";
+                } else {
+                    resultado.innerHTML = "O aluno foi REPROVADO.";
+                }
+            }
+        </script>
+
+    </body>
+</html>
+		</b>
+		<br>
+	</body>
 </html>

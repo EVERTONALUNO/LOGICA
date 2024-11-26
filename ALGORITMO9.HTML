@@ -3,17 +3,62 @@
 		<title> algoritmo9 </title>
 	</head>
 	<body bgcolor="">
-		<!-- salvar: INDEX.HTML -->
+		<!-- salvar: HOME.HTML -->
 		<hr>
-		   <center> ALGORITMO 9 </center>
-		<hr>
-		9. Verificação de Qualificação para Empréstimo
-		<br>
-Crie um programa que receba o salário e a idade de uma pessoa e verifique se ela qualifica para um empréstimo. A pessoa deve ter pelo menos 18 anos e o salário deve ser maior que 2000.
+			<center> 
+				<b> <!-- NEGRITO -->
+					ALGORITMO 9 
+				</b>
+			</center>
+		<hr>	
+		
+		 	9. Verificação de Qualificação para Empréstimo
 
 		<br>
-<h> <!-- NEGRITO -->
-		Resposta
-	</h>
-	<body>
+			Crie um programa que receba o salário e a idade de uma pessoa e verifique se ela qualifica para um empréstimo. A pessoa deve ter pelo menos 18 anos e o salário deve ser maior que 2000. 
+		<br>
+		<b> <!-- NEGRITO -->
+			Resposta 
+
+			<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Empréstimo</title>
+</head>
+<body>
+    <h2>Verificar Qualificação para Empréstimo</h2>
+
+    <label for="idade">Digite sua idade:</label>
+    <input type="number" id="idade">
+    <br><br>
+    
+    <label for="salario">Digite seu salário:</label>
+    <input type="number" id="salario">
+    <br><br>
+
+    <button onclick="verificarEmprestimo()">Verificar Qualificação</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarEmprestimo() {
+            var idade = parseInt(document.getElementById("idade").value);
+            var salario = parseFloat(document.getElementById("salario").value);
+            var resultado = document.getElementById("resultado");
+
+            if (idade >= 18 && salario > 2000) {
+                resultado.textContent = "Você qualifica para o empréstimo!";
+            } else {
+                resultado.textContent = "Você não qualifica para o empréstimo. Precisa ter pelo menos 18 anos e salário superior a R$ 2000.";
+            }
+        }
+    </script>
+</body>
+</html>
+
+		</b>
+		<br>
+	</body>
 </html>
